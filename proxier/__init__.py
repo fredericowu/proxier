@@ -2,7 +2,7 @@ import requests
 
 
 class Proxier:
-    API = "api.proxier.io"
+    API_HOST = "api.proxier.io"
     PROXY_ENDPOINT = "proxy"
 
     def __init__(self):
@@ -10,11 +10,11 @@ class Proxier:
         self.port = None
 
     def get(self):
-        response = requests.get("https://{}/{}".format(self.API, self.PROXY_ENDPOINT))
+        response = requests.get("https://{}/{}".format(self.API_HOST, self.PROXY_ENDPOINT))
         if response.status_code == 200:
             data = response.json()
-            for prop in ("ip", "port"):
-                setattr(self, prop, data.get(prop))
+            for attr in ("ip", "port"):
+                setattr(self, attr, data.get(attr))
         return self.ip, self.port
 
 
