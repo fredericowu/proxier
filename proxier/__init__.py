@@ -18,5 +18,12 @@ class Proxier:
         return self.ip, self.port
 
 
+proxier = Proxier()
+
+
+def get_proxy():
+    return proxier.get()
+
+
 
 
