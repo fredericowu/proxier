@@ -20,6 +20,7 @@ packages = ['proxier']
 
 requires = [
     'requests>=2.23.0',
+    'wheel',
 ]
 
 test_requirements = [
