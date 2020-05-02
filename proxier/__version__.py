@@ -1,7 +1,7 @@
 __title__ = 'proxier'
 __description__ = 'Get a Proxy server address easily'
 __url__ = 'https://github.com/fredericowu/proxier'
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 __author__ = 'Frederico Dias Wu'
 __author_email__ = 'fredericowu@gmail.com'
 __license__ = 'Apache 2.0'

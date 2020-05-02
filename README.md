@@ -12,5 +12,9 @@ It consumes data provided by `proxier.io` APIs.
 
 ```python
 import proxier
-proxy_ip, proxy_port = proxier.get_proxy()
+import requests
+
+response = requests.get("http://bot.whatismyipaddress.com/", proxies=proxier.get_requests_proxy())
+print("my ip: " + response.text)
+
 ```

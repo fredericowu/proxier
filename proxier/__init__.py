@@ -25,5 +25,14 @@ def get_proxy():
     return proxier.get()
 
 
+def get_requests_proxy():
+    ip, port = proxier.get()
+    result = {
+        "http": "http://{}:{}".format(ip, port)
+    }
+    return result
+
+
+
 
 
