@@ -12,7 +12,7 @@ class Proxier:
     def get(self):
         response = requests.get("https://{}/{}".format(self.API_HOST, self.PROXY_ENDPOINT))
         if response.status_code == 200:
-            data = response.json()
+            data = response.json()[0]
             for attr in ("ip", "port"):
                 setattr(self, attr, data.get(attr))
         return self.ip, self.port
